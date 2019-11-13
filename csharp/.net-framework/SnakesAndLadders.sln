@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnakesAndLadders.ClassLibrary", "SnakesAndLadders.ClassLibrary.csproj", "{18E20F2E-1936-48FC-9378-7F93BEFAC36F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnakesAndLadders.ClassLibrary", "SnakesAndLadders.ClassLibrary\SnakesAndLadders.ClassLibrary.csproj", "{18E20F2E-1936-48FC-9378-7F93BEFAC36F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnakesAndLadders.ClassLibrary.Tests", "..\SnakesAndLadders.ClassLibrary.Tests\SnakesAndLadders.ClassLibrary.Tests.csproj", "{5F6EBCE8-3620-4B69-A4D1-6F37420C4600}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnakesAndLadders.ClassLibrary.Tests", "SnakesAndLadders.ClassLibrary.Tests\SnakesAndLadders.ClassLibrary.Tests.csproj", "{5F6EBCE8-3620-4B69-A4D1-6F37420C4600}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnakesAndLadders.ConsoleApp", "..\SnakesAndLadders.ConsoleApp\SnakesAndLadders.ConsoleApp.csproj", "{9A0778A5-4296-44FB-A5D8-84514EE77567}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnakesAndLadders.ConsoleApp", "SnakesAndLadders.ConsoleApp\SnakesAndLadders.ConsoleApp.csproj", "{9A0778A5-4296-44FB-A5D8-84514EE77567}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
