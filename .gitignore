@@ -1,0 +1,14 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/csharp/.net-framework/SnakesAndLadders.ClassLibrary/.vs/SnakesAndLadders.ClassLibrary/v15
+/csharp/.net-framework/SnakesAndLadders.ClassLibrary/bin/Debug
+/csharp/.net-framework/SnakesAndLadders.ClassLibrary/obj/Debug
+/csharp/.net-framework/SnakesAndLadders.ClassLibrary/packages
+/csharp/.net-framework/SnakesAndLadders.ClassLibrary.Tests/bin/Debug
+/csharp/.net-framework/SnakesAndLadders.ClassLibrary.Tests/obj/Debug
+/csharp/.net-framework/SnakesAndLadders.ClassLibrary/SnakesAndLadders.ConsoleApp/bin/Debug
+/csharp/.net-framework/SnakesAndLadders.ClassLibrary/SnakesAndLadders.ConsoleApp/obj/Debug
+/csharp/.net-framework/SnakesAndLadders.ConsoleApp/bin/Debug
+/csharp/.net-framework/SnakesAndLadders.ConsoleApp/obj/Debug
