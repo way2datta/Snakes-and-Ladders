@@ -1,6 +1,6 @@
-import { expect } from "chai";
-import Calculator from "./Calculator";
-describe("Calculator", () => {
+import Calculator from "../src/Calculator";
+
+describe("Separate Calculator Test", () => {
     describe("#add", () => {
         it("should return addition of two operands", () => {
             // Arrange
@@ -11,7 +11,7 @@ describe("Calculator", () => {
             const addition = Calculator.add(operand1, operand2);
 
             // Assert
-            expect(addition).to.be.equal(79);
+            expect(addition).toBe(79);
         });
     });
 });
