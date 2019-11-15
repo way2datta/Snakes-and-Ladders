@@ -8,7 +8,7 @@ import kotlin.test.assertEquals
 
 class CalculatorTest {
     @Test
-    fun testAppHasAGreeting() {
+    fun `should add two numbers`() {
         val calculator = Calculator()
         assertEquals(0, calculator.add(0, 0))
         assertEquals(6, calculator.add(4, 2))
