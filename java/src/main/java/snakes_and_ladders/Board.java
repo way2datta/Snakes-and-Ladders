@@ -11,15 +11,13 @@ import java.util.Properties;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Board {
-
 	static List<Cell> board;
-
+	private static final int MAXVALUES = 100;
 	static {
 		board = new ArrayList<Cell>();
 		for (int i = 1; i <= 100; i++) {
-			board.add(new Cell(i)); //read from property
+			board.add(new Cell(i));
 		}
-
 		try {
 			readFromProperties();
 		} catch (IOException e) {
@@ -35,25 +33,25 @@ public class Board {
 		InputStream input = new FileInputStream("values.properties");
 		Properties prop = new Properties();
 		prop.load(input);
+		setSnakeAndLadderValues(prop);
+	}
+
+	private static void setSnakeAndLadderValues(Properties prop) {
 		Iterator<Entry<Object, Object>> it = prop.entrySet().iterator();
 		while (it.hasNext()) {
 			Entry<Object, Object> obj = it.next();
-			board.remove(new Cell(Integer.parseInt((String) obj.getKey())));
-			board.add(new Cell(Integer.parseInt((String) obj.getKey()), Integer.parseInt((String) obj.getValue())));
+			Cell currCell = board.get(board.indexOf(new Cell(Integer.parseInt((String) obj.getKey()))));
+			currCell.setNextPosition(Integer.parseInt((String) obj.getValue()));
 		}
 	}
 
-	public static Object getNextPositon(Cell cell, int diceValue) {
-		int nextPost = cell.currentPos + diceValue;
-		if (nextPost > 100) {
-			return cell.currentPos;
+	public static int getNextCellPosition(Cell currCell, int diceValue) {
+		int newPosition = currCell.getNextPositon(diceValue);
+		if (newPosition > MAXVALUES) {
+			return currCell.currentPosition;
 		}
-		Cell nextCell = board.get(board.indexOf(new Cell(nextPost)));
-		return nextCell.nextPos == 0 ? nextPost : nextCell.nextPos;
-	}
-
-	public static void main(String[] args) {
-		new Board();
+		Cell nextCell = board.get(board.indexOf(new Cell(newPosition)));
+		return nextCell.nextPosition == 0 ? newPosition : nextCell.nextPosition;
 	}
 
 }

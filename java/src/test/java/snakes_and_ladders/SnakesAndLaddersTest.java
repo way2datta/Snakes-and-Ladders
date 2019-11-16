@@ -7,32 +7,27 @@ public class SnakesAndLaddersTest {
 	@Test
 	public void validateDiceValue() {
 		int diceValue = Board.getDiceValue();
-		Assert.assertTrue(diceValue > 0 && diceValue <= 6);
+		Assert.assertTrue("Dice value is not in range 1 to 6", diceValue > 0 && diceValue <= 6);
 	}
 
 	@Test
 	public void validateNewPosition() {
-		Assert.assertEquals(9, Board.getNextPositon(new Cell(4), 5));
-	}
-
-	@Test
-	public void validateNewPosition1() {
-		Assert.assertEquals(33, Board.getNextPositon(new Cell(5), 2));
+		Assert.assertEquals("New postion is not calculated", 9, Board.getNextCellPosition(new Cell(4), 5));
 	}
 
 	@Test
 	public void validateNewPositionForLadder() {
-		Assert.assertEquals(85, Board.getNextPositon(new Cell(34), 3));
+		Assert.assertEquals("Current position not respecting Ladder rise", 85, Board.getNextCellPosition(new Cell(34), 3));
 	}
 
 	@Test
 	public void validateNewPositionForSnake() {
-		Assert.assertEquals(35, Board.getNextPositon(new Cell(60), 5));
+		Assert.assertEquals("Current position not respecting Snake bite", 35, Board.getNextCellPosition(new Cell(60), 5));
 	}
 
 	@Test
 	public void validateNewPositionForAbove100() {
-		Assert.assertEquals(96, Board.getNextPositon(new Cell(96), 5));
+		Assert.assertEquals("Current position is exceeding 100", 96, Board.getNextCellPosition(new Cell(96), 5));
 	}
 
 }
